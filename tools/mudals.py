@@ -1,12 +1,15 @@
 from tkinter import *
+from tkinter.ttk import *
 from data_base.data_base_manager import *
 from validation import *
+from view.car_park_veiw import *
 
 def save_car () :
 
     try:
         name_check( car_name.get() )
         model_check( car_model.get() )
+        check_plate(  )
 
         save()   
 
@@ -16,7 +19,5 @@ def save_car () :
         car_plate.set( "" )
 
     except Exception as e :
-        msg.showerror( "Error" , f"{e}" )
+        Message.showerror( "Error" , f"{e}" )
 
-
-   
