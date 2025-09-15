@@ -1,14 +1,14 @@
 from tkinter import *
 from tkinter.ttk import *
 from data_base.data_base_manager import *
-from validation import *
+from tools.validation import *
 from view.car_park_veiw import *
 from datetime import *
 
 def save_car ( car_name , car_model , Car_color , car_plate ) :
 
     try:
-        present_time = time.now()
+        present_time = datetime.now()
         name_check( car_name )
         model_check( car_model )
         check_plate(  )

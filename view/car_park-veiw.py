@@ -1,6 +1,7 @@
 from tkinter import *
 from tkinter.ttk import Combobox
 from tools.mudals import *
+from tools.validation import *
 
 def view ():
     window = Tk()
