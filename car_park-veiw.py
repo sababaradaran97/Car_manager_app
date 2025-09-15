@@ -1,5 +1,6 @@
 from tkinter import *
 from tkinter.ttk import Combobox
+from tools.mudals import *
 
 window = Tk()
 window.title( "Car_program" )
@@ -26,7 +27,7 @@ Label( window , text = "Car plate" ).place( x = 25 , y = 150 )
 Entry( window , textvariable = car_plate ).place( x = 100 , y = 150 )
 
 #save
-Button( window , text = "save" , width = 15 ).place( x = 25 , y = 200 )
+Button( window , text = "save" , width = 15 , command = save_car() ).place( x = 25 , y = 200 )
 
 
 window.mainloop()
