@@ -3,15 +3,17 @@ from tkinter.ttk import *
 from data_base.data_base_manager import *
 from validation import *
 from view.car_park_veiw import *
+from datetime import *
 
-def save_car () :
+def save_car ( car_name , car_model , Car_color , car_plate ) :
 
     try:
+        present_time = time.now()
         name_check( car_name )
         model_check( car_model )
         check_plate(  )
 
-        save()   
+        save( car_name , car_model , Car_color , car_model , present_time )   
 
         car_name.set( "" )
         car_model.set( "" )
@@ -20,6 +22,5 @@ def save_car () :
 
     except Exception as e :
         Message.showerror( "Error" , f"{e}" )
-
-
     
+
