@@ -7,8 +7,8 @@ from view.car_park_veiw import *
 def save_car () :
 
     try:
-        name_check( car_name.get() )
-        model_check( car_model.get() )
+        name_check( car_name )
+        model_check( car_model )
         check_plate(  )
 
         save()   
@@ -21,3 +21,5 @@ def save_car () :
     except Exception as e :
         Message.showerror( "Error" , f"{e}" )
 
+
+    
