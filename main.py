@@ -1,3 +1,4 @@
-from view.car_park_veiw import *
+from car_park_veiw import *
+
 
 view()
